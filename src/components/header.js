@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 const Header = () => (
   <header>
     <div className="container">
+      <div className="inner-header">
       <div className="logo">
         <Link to="/">Gavin Reid - Scottish Artist</Link>
       </div>
@@ -14,6 +15,7 @@ const Header = () => (
           <Link to="/about">Shop</Link>
           <Link to="/about">Contact</Link>
         </nav>
+      </div>
       </div>
     </div>
   </header>

@@ -1,9 +1,13 @@
 import * as React from "react"
 import "../styles/styles.scss"
 
-const IndexPage = () => (
-  <p>Home</p>
+//Import Components
+import Header from "../components/header"
 
+const IndexPage = () => (
+  <div>
+    <Header />    
+  </div>
 )
 
 export default IndexPage

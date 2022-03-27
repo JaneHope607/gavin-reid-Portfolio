@@ -9,10 +9,12 @@ $off-white: #f2f4f5;
 html, body {
     font-family: $font;
     font-size: 16px;
+    padding: 0;
+    margin: 0;
+    background: $white;
 }
 
 .container {
-    width: 1640px;
     min-width: 1640px;
     margin: 0 auto;
     @media(max-width: 1440px) {
@@ -33,7 +35,6 @@ html, body {
 header {
     height: 80px;
     width: 100%;
-    position: absolute;
     top: 0px;
     z-index: 10;
     .inner-header {
@@ -74,8 +75,8 @@ header {
     align-items: center;
     background-color: $white;
     position: relative;
-    height: 100vh;
-    row {
+    // height: 100vh;
+    .row {
         position: relative;
         .main-text {
             font-size: 5.8rem;
@@ -96,5 +97,76 @@ header {
                 letter-spacing: 36px;
             }
         }
+        .main-image {
+            width: 40%;
+            margin: 0 auto;
+        }
+        .side-image {
+            width: 260px;
+            position: absolute;
+            @media (max-width: 768px) {
+                display: none;
+            }
+            &.left {
+                left: 5%;
+                top: 12px;
+                @media (max-width: 1440px) {
+                    width: 128px;
+                }
+            }
+            &.right {
+                right: 5%;
+                bottom: 12px;
+                @media (max-width: 1440px) {
+                    width: 128px;
+                }
+            }
+        }
+    }
+    .fixed-misc {
+        position: fixed;
+        top: 50%;
+        right: -48px;
+        transform: rotate(-90deg);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: .875rem;
+        letter-spacing: 1.5px;
+        color: $white;
+        mix-blend-mode: difference;
+        z-index: 8;
+        @media (max-width: 1440px) {
+            right: -112px;
+        }
+    }
+}
+
+//About blurb
+.about-blurb {
+    .inner-blurb {
+        .content {
+            h3 {
+
+            }
+            p {
+
+            }
+            .btn-row {
+                a {
+
+                }
+            }
+        }
+        .images {
+            .top-right {
+
+            }
+            .top-left {
+
+            }
+        }
+    }
+    .black-box {
+        
     }
 }

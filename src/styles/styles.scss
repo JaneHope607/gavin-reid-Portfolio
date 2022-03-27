@@ -60,9 +60,13 @@ header {
                     text-transform: uppercase;
                     font-size: 0.75rem;
                     color: $black;
+                    margin-bottom: 1rem;
                     &:last-child {
                         margin-right: 0px;
                     }
+                }
+                a:hover {
+                    text-decoration: underline solid black 3p x;
                 }
             }
         }
@@ -142,31 +146,169 @@ header {
 }
 
 //About blurb
+
 .about-blurb {
+    padding: 48px 0;
+    background: $white;
+    position: relative;
     .inner-blurb {
-        .content {
-            h3 {
-
-            }
-            p {
-
-            }
-            .btn-row {
-                a {
-
-                }
-            }
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .content {
+        width: 33%;
+        @media (max-width: 1440px) {
+          width: 40%;
         }
-        .images {
-            .top-right {
-
-            }
-            .top-left {
-
-            }
+        h3 {
+          font-weight: 700;
+          text-transform: uppercase;
+          font-size: 1.8rem;
+          letter-spacing: 1.5px;
+          margin: 0;
         }
+        p {
+          font-size: 1rem;
+          line-height: 2rem;
+          font-weight: 300;
+          margin: 40px 0 72px;
+        }
+        .btn-row {
+          a {
+            font-weight: 700;
+            font-size: 0.875rem;
+            letter-spacing: 1.5px;
+            color: $black;
+            text-transform: uppercase;
+            text-decoration: none;
+          }
+        }
+      }
+      .images {
+        width: 50%;
+        height: 1000px;
+        position: relative;
+        z-index: 7;
+        @media (max-width: 1440px) {
+          height: 800px;
+        }
+        .top-right {
+          position: absolute;
+          width: 460px;
+          top: 0;
+          right: 0;
+          z-index: 4;
+          @media (max-width: 1440px) {
+            width: 360px;
+          }
+        }
+        .bottom-left {
+          position: absolute;
+          width: 410px;
+          left: 0;
+          bottom: 0;
+          @media (max-width: 1440px) {
+            width: 310px;
+          }
+        }
+      }
     }
     .black-box {
-        
+      background: $black;
+      height: 418px;
+      width: 836px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      @media (max-width: 1440px) {
+        width: 636px;
+        height: 340px;
+      }
+      &.overlay {
+        z-index: 7;
+        background: $maroon;
+        mix-blend-mode: overlay;
+      }
     }
-}
+  }
+
+  //video section
+.video-section {
+    margin-top: 160px;
+    .container {
+      .video-player {
+        width: 100%;
+        margin: 0 auto;
+        video {
+          width: 100%;
+          outline: none;
+        }
+      }
+      .video-content {
+        display: flex;
+        justify-content: space-between;
+        margin: 80px 0 120px;
+        .title {
+          width: 50%;
+          h3 {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            letter-spacing: 1.5px;
+            margin: 0;
+          }
+        }
+        .content {
+          width: 50%;
+          p {
+            font-size: 1rem;
+            line-height: 2rem;
+            font-weight: 300;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+  
+  //footer
+  footer {
+    .featured-companies {
+      background: $black;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      .container {
+        ul {
+          display: flex;
+          justify-content: space-around;
+          padding: 0;
+          align-items: center;
+          flex-direction: row;
+          li {
+            text-align: center;
+            img {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+    .footer {
+      background: $off-white;
+      height: 80px;
+      .inner {
+        padding: 0 120px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .socials {
+          a {
+            margin: 0 8px;
+          }
+        }
+      }
+    }
+  }

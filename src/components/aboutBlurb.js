@@ -28,7 +28,7 @@ const AboutBlurb = () => {
                             <StaticImage src="../images/glasgow.jpg"
                             alt="Barrowlands Glasgow" placeholder="blurred" />
                         </div>
-                        <div className="top-left">
+                        <div className="bottom-left">
                             <StaticImage src="../images/glasgow.jpg"
                             alt="Barrowlands Glasgow" placeholder="blurred" />
                         </div>
